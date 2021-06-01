@@ -16,7 +16,7 @@ function CardList() {
 
   if (pokemon) {
     return (
-      <div>
+      <div className="cardList__container">
         {pokemon.map((pokemon) => {
           return <PokemonCard key={pokemon.name} name={pokemon.name} url={pokemon.url} />;
         })}

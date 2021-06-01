@@ -1,0 +1,12 @@
+.cardList__container {
+    display:flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    justify-content: center;
+}
+
+.card__container {
+    color: white;
+    padding: 2em;
+    border-radius: 2em;
+}
