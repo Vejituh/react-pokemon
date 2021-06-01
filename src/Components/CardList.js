@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import PokemonCard from './PokemonCard';
+import PokemonCard from "./PokemonCard";
 
 function CardList() {
   const [pokemon, setPokemon] = useState([]);
@@ -18,8 +18,7 @@ function CardList() {
     return (
       <div>
         {pokemon.map((pokemon) => {
-          let { name, url } = pokemon;
-          return <PokemonCard name={name} url={url}/>;
+          return <PokemonCard key={pokemon.name} name={pokemon.name} url={pokemon.url} />;
         })}
       </div>
     );
