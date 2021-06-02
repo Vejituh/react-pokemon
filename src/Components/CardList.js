@@ -10,7 +10,7 @@ function CardList() {
   
   useEffect(() => {
     const fetchPokemon = async () => {
-      const response = await fetch(`${fetchBaseUrl}pokemon${generation}`);
+      const response = await fetch(`${fetchBaseUrl}pokemon${generation? generation:"?limit=151&offset=0"}`);
       const data = await response.json();
       setPokemon(data.results);
     };
