@@ -1,0 +1,47 @@
+.base-stats__section {
+    display: flex;
+    gap: 1em;
+}
+
+.base-stats__headers,
+.base-stats__data {
+  display: flex;
+  flex-direction: column;
+  justify-content:space-evenly;
+  gap: 0.3em;
+  text-transform: capitalize;
+}
+
+.base-stats__headers {
+    color: #cfd0d3;
+    font-weight: 700;
+    flex: 1;
+    max-width: 180px;
+}
+
+.base-stats__headers p {
+  width: max-content;
+}
+
+.base-stats__data {
+  flex: 2;
+}
+
+.stat__value {
+  min-width: 30.55px; 
+}
+
+.stat__bar {
+  display: flex;
+  margin-left: 0.5em;
+}
+
+
+@media (min-width: 1800px) {
+  .stat__bar {
+    margin-left: 1em;
+  }
+  .stat__value {
+    min-width: 39.7px; 
+  }
+}

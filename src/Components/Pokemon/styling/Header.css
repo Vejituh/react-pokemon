@@ -1,0 +1,41 @@
+.header__nav {
+  display: flex;
+  justify-content: space-evenly;
+  width: 90%;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.header__nav::after {
+  position: absolute;
+  margin-top: 2.5em;
+  content: "";
+  height: 3px;
+  background: #f9faf9;
+  width: 82%;
+  max-width: 1030px;
+}
+
+.header__nav button {
+  outline: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.header__nav button::after {
+  display: block;
+  content: "";
+  margin-top: 1.8em;
+  height: 3px;
+}
+
+@media (min-width: 1800px) {
+  .header__nav button:after {
+    margin-top: 1.3em;
+  }
+  .header__nav::after {
+    width: 94%;
+  }
+}

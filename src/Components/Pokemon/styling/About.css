@@ -1,0 +1,23 @@
+.about__section {
+  width: 80%;
+  margin: 1.2em auto;
+  display: flex;
+  gap: 2em;
+}
+
+.about__headers,
+.about__data {
+  display: flex;
+  flex-direction: column;
+  justify-content:space-evenly;
+  gap: 1em;
+}
+
+.about__headers {
+  color: #cfd0d3;
+  font-weight: 700;
+}
+
+.about__data div span + span:last-child::before {
+  content: ", ";
+}
