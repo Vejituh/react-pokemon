@@ -1,4 +1,34 @@
+.evolution__section figure {
+  display: flex;
+  place-content: center;
+}
+
 .evolution__section img {
-  height: 150px;
-  width: 150px;
+  height: auto;
+  width: 250px;
+}
+
+.evolution__headers {
+  display: flex;
+  flex-wrap: wrap;
+  place-content: center;
+  justify-content: space-around;
+}
+
+.evolution__headers div {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 33%;
+  max-width: 350px;
+  place-content: center;
+  margin-bottom: 2em;
+}
+
+.evolution__headers p {
+  text-transform: capitalize;
+  text-align: center;
+  color: #8c9096;
+  font-weight: 700;
+  margin-top: 0.5em;
 }

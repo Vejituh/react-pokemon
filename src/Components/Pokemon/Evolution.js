@@ -9,19 +9,23 @@ function Evolution({ pokemon }) {
       return (
         <>
           <div>
-            <img
-              alt="pokemon"
-              src={`${spriteUrl}${obj.chain.species.url.split("/")[6]}.png`}
-            ></img>
+            <figure>
+              <img
+                alt="pokemon"
+                src={`${spriteUrl}${obj.chain.species.url.split("/")[6]}.png`}
+              ></img>
+            </figure>
             <p>{obj.chain.species.name}</p>
           </div>
           {obj.chain.evolves_to.map((evo) => {
             return (
               <div>
-                <img
-                  alt="pokemon"
-                  src={`${spriteUrl}${evo.species.url.split("/")[6]}.png`}
-                ></img>
+                <figure>
+                  <img
+                    alt="pokemon"
+                    src={`${spriteUrl}${evo.species.url.split("/")[6]}.png`}
+                  ></img>
+                </figure>
                 <p>{evo.species.name}</p>
               </div>
             );
@@ -35,28 +39,36 @@ function Evolution({ pokemon }) {
       return (
         <>
           <div>
-            <img
-              alt="pokemon"
-              src={`${spriteUrl}${obj.chain.species.url.split("/")[6]}.png`}
-            ></img>
+            <figure>
+              <img
+                alt="pokemon"
+                src={`${spriteUrl}${obj.chain.species.url.split("/")[6]}.png`}
+              ></img>
+            </figure>
             <p>{obj.chain.species.name}</p>
           </div>
           <div>
-            <img
-              alt="pokemon"
-              src={`${spriteUrl}${
-                obj.chain.evolves_to[0].species.url.split("/")[6]
-              }.png`}
-            ></img>
+            <figure>
+              <img
+                alt="pokemon"
+                src={`${spriteUrl}${
+                  obj.chain.evolves_to[0].species.url.split("/")[6]
+                }.png`}
+              ></img>
+            </figure>
             <p>{obj.chain.evolves_to[0].species.name}</p>
           </div>
           <div>
-            <img
-              alt="pokemon"
-              src={`${spriteUrl}${
-                obj.chain.evolves_to[0].evolves_to[0].species.url.split("/")[6]
-              }.png`}
-            ></img>
+            <figure>
+              <img
+                alt="pokemon"
+                src={`${spriteUrl}${
+                  obj.chain.evolves_to[0].evolves_to[0].species.url.split(
+                    "/"
+                  )[6]
+                }.png`}
+              ></img>
+            </figure>
             <p>{obj.chain.evolves_to[0].evolves_to[0].species.name}</p>
           </div>
         </>
@@ -68,19 +80,23 @@ function Evolution({ pokemon }) {
       return (
         <>
           <div>
-            <img
-              alt="pokemon"
-              src={`${spriteUrl}${obj.chain.species.url.split("/")[6]}.png`}
-            ></img>
+            <figure>
+              <img
+                alt="pokemon"
+                src={`${spriteUrl}${obj.chain.species.url.split("/")[6]}.png`}
+              ></img>
+            </figure>
             <p>{obj.chain.species.name}</p>
           </div>
           <div>
-            <img
-              alt="pokemon"
-              src={`${spriteUrl}${
-                obj.chain.evolves_to[0].species.url.split("/")[6]
-              }.png`}
-            ></img>
+            <figure>
+              <img
+                alt="pokemon"
+                src={`${spriteUrl}${
+                  obj.chain.evolves_to[0].species.url.split("/")[6]
+                }.png`}
+              ></img>
+            </figure>
             <p>{obj.chain.evolves_to[0].species.name}</p>
           </div>
         </>
