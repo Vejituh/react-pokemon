@@ -20,7 +20,7 @@ function Pokemon() {
   const components = {
     AboutComp: <About pokemon={pokemon} />,
     StatsComp: <Stats pokemon={pokemon} />,
-    EvolutionComp: <Evolution pokemon={evolution} />,
+    EvolutionComp: <Evolution pokemon={evolution} onChange={eventhandler} />,
     MovesComp: <Moves pokemon={pokemon} />,
   };
 

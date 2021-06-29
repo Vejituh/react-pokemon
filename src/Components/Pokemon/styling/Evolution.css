@@ -15,20 +15,22 @@
   justify-content: space-around;
 }
 
-.evolution__headers div {
+.evolution__headers a {
   display: flex;
   flex-direction: column;
   text-align: left;
-  width: 33%;
+  width: 30%;
   max-width: 350px;
   place-content: center;
   margin-bottom: 2em;
+  text-decoration: none;
 }
 
 .evolution__headers p {
   text-transform: capitalize;
   text-align: center;
-  color: #8c9096;
+  color: #cfd0d3;
   font-weight: 700;
   margin-top: 0.5em;
+  font-size: 0.9em;
 }
