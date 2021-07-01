@@ -18,6 +18,10 @@
   font-weight: 700;
 }
 
+.about__data div span {
+  text-transform: capitalize;
+}
+
 .about__data div span + span:last-child::before {
   content: ", ";
 }
