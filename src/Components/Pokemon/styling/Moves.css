@@ -1,6 +1,13 @@
 .move__container {
     display: flex;
     justify-content: space-between;
+    width: 280px;
+  }
+
+  .moves__section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   .moves__section h5 {
