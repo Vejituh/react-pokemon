@@ -1,5 +1,13 @@
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+body {
+  font-family: "Pokemon-font", monospace;
+  font-smooth: never;
+  -webkit-font-smoothing: none;
 }

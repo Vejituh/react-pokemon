@@ -5,6 +5,7 @@
   padding: 2em;
   max-width: 1300px;
   margin: 0 auto;
+  font-size: 14px;
 }
 
 .cardList__container {
@@ -22,7 +23,7 @@
   flex-direction: column;
   justify-content:space-between;
   color: white;
-  padding: 0.6em;
+  padding: 1em;
   border-radius: 1.2em;
   max-width: 350px;
   height: 100%;
