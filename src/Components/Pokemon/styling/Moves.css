@@ -2,3 +2,9 @@
     display: flex;
     justify-content: space-between;
   }
+
+  .moves__section h5 {
+    text-transform: capitalize;
+    color: #cfd0d3;
+    font-weight: 700;
+  }

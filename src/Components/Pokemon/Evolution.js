@@ -55,7 +55,6 @@ function Evolution({ pokemon }) {
     ) {
       return (
         <>
-          {console.log(pokemon)}
           <Link
             to={`/pokemon/${obj.chain.species.url.split("/")[6]}`}
             key={obj.chain.species.url.split("/")[6]}
