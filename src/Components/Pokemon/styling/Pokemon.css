@@ -32,7 +32,7 @@ body,
   margin: 0.2em 0.2em;
   padding: 0.2em 16px;
   border-radius: 3em;
-  background: hsla(0deg, 0%, 90%, 0.2);
+  background: hsla(0deg, 0%, 0%, 0.3);
   text-align: center;
 }
 
@@ -84,7 +84,7 @@ body,
 }
 
 .inactive {
-  color: #cfd0d3;
+  color: #9c9090;
 }
 
 @media (min-width: 1800px) {

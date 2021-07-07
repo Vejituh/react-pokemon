@@ -48,7 +48,20 @@ function Pokemon() {
     >
       <div className="pokemon__main">
         <section className="pokemon__mainContainer">
-          <div className="card__mainText">
+          <div
+            className="card__mainText"
+            style={{
+              color: `${
+                pokemon.types[0].type.name === "electric" ||
+                pokemon.types[0].type.name === "ground" ||
+                pokemon.types[0].type.name === "flying" ||
+                pokemon.types[0].type.name === "steel" ||
+                pokemon.types[0].type.name === "ice"
+                  ? "black"
+                  : "white"
+              }`,
+            }}
+          >
             <h2>{`${pokemon.name}`}</h2>
             {pokemon.id < 10 ? (
               <h3>#00{pokemon.id}</h3>

@@ -24,6 +24,10 @@
   font-weight: 700;
 }
 
+.header__nav button:focus, button:hover {
+  background: rgba(0,0,0,0.01)
+}
+
 .header__nav button::after {
   display: block;
   content: "";
