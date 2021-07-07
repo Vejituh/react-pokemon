@@ -35,6 +35,7 @@ export default function Nav({ onChange }) {
         onChange={getGeneration}
         separator={true}
         placeholder="Pick a Generation"
+        role="Generation selector for Pokemon"
       />
     </nav>
   );

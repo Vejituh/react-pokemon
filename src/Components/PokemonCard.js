@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import pokemonBackground from "../utils/pokemonTypesColours";
 
-export default function PokemonCard({ name, url}) {
+export default function PokemonCard({ name, url }) {
   const [pokemon, setPokemon] = useState([]);
 
   useEffect(() => {
@@ -22,7 +22,6 @@ export default function PokemonCard({ name, url}) {
     };
   }, [url]);
 
-
   return (
     <>
       {pokemon.id && (
@@ -34,7 +33,20 @@ export default function PokemonCard({ name, url}) {
             }`,
           }}
         >
-          <header style={{textAlign: "end"}}>
+          <header
+            style={{
+              textAlign: "end",
+              color: `${
+                pokemon.types[0].type.name === "electric" ||
+                pokemon.types[0].type.name === "ground" ||
+                pokemon.types[0].type.name === "flying" ||
+                pokemon.types[0].type.name === "steel" ||
+                pokemon.types[0].type.name === "ice"
+                  ? "black"
+                  : "white"
+              }`,
+            }}
+          >
             {pokemon.id < 10 ? (
               <h2>#00{pokemon.id}</h2>
             ) : pokemon.id < 100 ? (
@@ -45,11 +57,37 @@ export default function PokemonCard({ name, url}) {
           </header>
           <article className="card__main">
             <div className="card__mainText">
-              <h2>{`${name}`}</h2>
+              <h2
+                style={{
+                  color: `${
+                    pokemon.types[0].type.name === "electric" ||
+                    pokemon.types[0].type.name === "ground" ||
+                    pokemon.types[0].type.name === "flying" ||
+                    pokemon.types[0].type.name === "steel" ||
+                    pokemon.types[0].type.name === "ice"
+                      ? "black"
+                      : "white"
+                  }`,
+                }}
+              >{`${name}`}</h2>
               <div className="card__type">
                 {pokemon.types.map((type) => {
                   return (
-                    <div className="card__pokemonType" key={type.type.name}>
+                    <div
+                      style={{
+                        color: `${
+                          pokemon.types[0].type.name === "electric" ||
+                          pokemon.types[0].type.name === "ground" ||
+                          pokemon.types[0].type.name === "flying" ||
+                          pokemon.types[0].type.name === "steel" ||
+                          pokemon.types[0].type.name === "ice"
+                            ? "black"
+                            : "white"
+                        }`,
+                      }}
+                      className="card__pokemonType"
+                      key={type.type.name}
+                    >
                       {type.type.name}
                     </div>
                   );
