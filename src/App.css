@@ -47,6 +47,7 @@
   min-height: 180px;
   min-width: 200px;
   place-content: flex-end;
+  padding: 0.5em;
 }
 
 @media (min-width: 375px) {
