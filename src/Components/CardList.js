@@ -14,8 +14,7 @@ function CardList() {
     const fetchPokemon = async () => {
       setLoading(true);
       const response = await fetch(
-        `${fetchBaseUrl}pokemon${
-          generation ? generation : "?limit=151&offset=0"
+        `${fetchBaseUrl}pokemon${generation ? generation : "?limit=151&offset=0"
         }`
       );
       const data = await response.json();
@@ -34,7 +33,7 @@ function CardList() {
       <Nav onChange={eventhandler} />
       {pokemon ? (
         <>
-          <div className="center-on-page" style={{display: loading? "inline":"none"}}>
+          <div className="center-on-page" style={{ display: loading ? "inline" : "none" }}>
             <div className="pokeball">
               <div className="pokeball__button"></div>
             </div>
