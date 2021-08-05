@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import pokemonBackground from "../utils/pokemonTypesColours";
+import Image from "./Image";
 
-export default function PokemonCard({ name, url }) {
+export default function PokemonCard({ name, url, src}) {
   const [pokemon, setPokemon] = useState([]);
 
   useEffect(() => {
@@ -95,10 +96,7 @@ export default function PokemonCard({ name, url }) {
               </div>
             </div>
             <figure className="pokemons__imgContainer">
-              <img
-                src={pokemon.sprites.other["official-artwork"].front_default}
-                alt="Pokemon artwork"
-              ></img>
+                <Image src={src} id={pokemon.id} alt="Pokemon offical artwork" />
             </figure>
           </article>
         </section>

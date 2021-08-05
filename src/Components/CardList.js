@@ -10,6 +10,15 @@ function CardList() {
   const fetchBaseUrl = "https://pokeapi.co/api/v2/";
   const eventhandler = (data) => setGeneration(data);
 
+  function importAll(r) {
+    return r.keys().map(r);
+  }
+
+  const images = importAll(require.context('../utils/official-artwork', true, /\.webp$/))
+
+  const sortable =
+    Object.values(images).sort((a, b) => a.default.split("/")[3].split(".")[0] - b.default.split("/")[3].split(".")[0]);
+
   useEffect(() => {
     const fetchPokemon = async () => {
       setLoading(true);
@@ -56,6 +65,7 @@ function CardList() {
                     key={pokemon.url.split("/")[6]}
                     name={pokemon.name}
                     url={pokemon.url}
+                    src={sortable[pokemon.url.split("/")[6] - 1].default}
                   />
                 </Link>
               );
