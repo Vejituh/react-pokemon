@@ -41,7 +41,6 @@ body,
   width: 100%;
   z-index: 10;
   padding: 4em 0;
-  height: max-content;
   color: black;
 }
 
@@ -61,9 +60,9 @@ body,
   margin-bottom: -4.5em;
 }
 
-.pokemon__img {
-  max-height: 230px;
-  max-width: 230px;
+.pokemon__imgContainer img {
+  height: 267.1875px;
+  width: 267.1875px;
   margin: 1em auto 0 auto;
   z-index: 11;
 }
@@ -89,7 +88,8 @@ body,
 
 @media (min-width: 1800px) {
   .pokemon__information,
-  button, .pokemon__mainContainer {
+  button,
+  .pokemon__mainContainer {
     font-size: 1.3rem;
   }
 }

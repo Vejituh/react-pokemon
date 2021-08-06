@@ -7,6 +7,7 @@ import About from "./About";
 import Stats from "./Stats";
 import Evolution from "./Evolution";
 import Moves from "./Moves";
+import Image from "../Image";
 
 function Pokemon() {
   let { id } = useParams();
@@ -24,6 +25,20 @@ function Pokemon() {
     MovesComp: <Moves pokemon={pokemon} />,
   };
 
+  function importAll(r) {
+    return r.keys().map(r);
+  }
+
+  const images = importAll(
+    require.context("../../utils/official-artwork", true, /\.webp$/)
+  );
+
+  const sortable = Object.values(images).sort(
+    (a, b) =>
+      a.default.split("/")[3].split(".")[0] -
+      b.default.split("/")[3].split(".")[0]
+  );
+
   useEffect(() => {
     const fetchPokemon = async () => {
       const response = await fetch(`${fetchBaseUrl}`);
@@ -33,7 +48,7 @@ function Pokemon() {
       const evoChainResp = await fetch(evoData.evolution_chain.url);
       const evoChainData = await evoChainResp.json();
       setPokemon(data);
-      setEvolution(evoChainData);
+      return setEvolution(evoChainData);
     };
 
     fetchPokemon();
@@ -81,11 +96,11 @@ function Pokemon() {
             </div>
           </div>
           <figure className="pokemon__imgContainer">
-            <img
-              className="pokemon__img"
-              src={pokemon.sprites.other["official-artwork"].front_default}
-              alt="Pokemon artwork"
-            ></img>
+            <Image
+              src={sortable[(id - 1)].default}
+              id={id}
+              alt="Pokemon offical artwork"
+            />
           </figure>
         </section>
       </div>
