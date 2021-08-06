@@ -7,7 +7,7 @@ function Header({ onChange }) {
 
   useEffect(() => {
     if (onChange) {
-      onChange(displayComponent);
+      return onChange(displayComponent);
     }
   }, [displayComponent, onChange]);
 

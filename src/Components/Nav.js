@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Select from "react-dropdown-select";
 
 export default function Nav({ onChange }) {
-  const [generation, setGeneration] = useState("");
+  const [generation, setGeneration] = useState("?limit=151&offset=0");
   const generations = [
     { label: "Generation I", value: "?limit=151&offset=0" },
     { label: "Generation II", value: "?limit=100&offset=151" },

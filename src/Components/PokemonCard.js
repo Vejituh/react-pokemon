@@ -1,15 +1,26 @@
 import React, { useState, useEffect } from "react";
 import pokemonBackground from "../utils/pokemonTypesColours";
+import Image from "./Image";
 
-export default function PokemonCard({ name, url }) {
+export default function PokemonCard({ name, url, src }) {
   const [pokemon, setPokemon] = useState([]);
+
+  const getColour = (pokemon) => {
+    return pokemon.types[0].type.name === "electric" ||
+      pokemon.types[0].type.name === "ground" ||
+      pokemon.types[0].type.name === "flying" ||
+      pokemon.types[0].type.name === "steel" ||
+      pokemon.types[0].type.name === "ice"
+      ? "black"
+      : "white";
+  };
 
   useEffect(() => {
     const fetchPokemon = async () => {
       try {
         const response = await fetch(url);
         const data = await response.json();
-        setPokemon(data);
+        return setPokemon(data);
       } catch (error) {
         console.log(error);
       }
@@ -36,15 +47,7 @@ export default function PokemonCard({ name, url }) {
           <header
             style={{
               textAlign: "end",
-              color: `${
-                pokemon.types[0].type.name === "electric" ||
-                pokemon.types[0].type.name === "ground" ||
-                pokemon.types[0].type.name === "flying" ||
-                pokemon.types[0].type.name === "steel" ||
-                pokemon.types[0].type.name === "ice"
-                  ? "black"
-                  : "white"
-              }`,
+              color: getColour(pokemon),
             }}
           >
             {pokemon.id < 10 ? (
@@ -59,15 +62,7 @@ export default function PokemonCard({ name, url }) {
             <div className="card__mainText">
               <h2
                 style={{
-                  color: `${
-                    pokemon.types[0].type.name === "electric" ||
-                    pokemon.types[0].type.name === "ground" ||
-                    pokemon.types[0].type.name === "flying" ||
-                    pokemon.types[0].type.name === "steel" ||
-                    pokemon.types[0].type.name === "ice"
-                      ? "black"
-                      : "white"
-                  }`,
+                  color: getColour(pokemon),
                 }}
               >{`${name}`}</h2>
               <div className="card__type">
@@ -75,15 +70,7 @@ export default function PokemonCard({ name, url }) {
                   return (
                     <div
                       style={{
-                        color: `${
-                          pokemon.types[0].type.name === "electric" ||
-                          pokemon.types[0].type.name === "ground" ||
-                          pokemon.types[0].type.name === "flying" ||
-                          pokemon.types[0].type.name === "steel" ||
-                          pokemon.types[0].type.name === "ice"
-                            ? "black"
-                            : "white"
-                        }`,
+                        color: getColour(pokemon),
                       }}
                       className="card__pokemonType"
                       key={type.type.name}
@@ -95,10 +82,7 @@ export default function PokemonCard({ name, url }) {
               </div>
             </div>
             <figure className="pokemons__imgContainer">
-              <img
-                src={pokemon.sprites.other["official-artwork"].front_default}
-                alt="Pokemon artwork"
-              ></img>
+              <Image src={src} id={pokemon.id} alt="Pokemon offical artwork" />
             </figure>
           </article>
         </section>
